@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador BNE</title>
+    <style>
+    .libros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.libro {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.libro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.libro h3 {
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.libro .autor {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.libro .detalles {
+    font-size: 0.85em;
+    color: #95a5a6;
+    margin-bottom: 15px;
+}
+
+.enlaces {
+    display: flex;
+    gap: 10px;
+}
+
+.boton-descarga, .boton-epub {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.boton-descarga {
+    background-color: #020c13;
+    color: white;
+}
+
+.boton-epub {
+    background-color: #5f6160;
+    color: white;
+}
+
+.boton-descarga:hover {
+    background-color: #2980b9;
+}
+
+.boton-epub:hover {
+    background-color: #27ae60;
+}
+/* Agregar al CSS existente */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.paginacion button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.paginacion button:hover {
+    background: #f5f5f5;
+}
+
+.paginacion button.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.paginacion span {
+    padding: 8px;
+    color: #666;
+}
+
+
+    </style>
+</head>
+<body>
+ 
+    <div id="resultados"></div>
+    <script src="bne-api.js"></script>
+</body>
+</html>
