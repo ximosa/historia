@@ -34,7 +34,7 @@ class BNEClient {
         
         for (let i = 0; i <= 10; i++) {
             try {
-                const response = await fetch(`../data/set_epubs_${i}.json`);
+                const response = await fetch(`./data/set_epubs_${i}.json`);
                 const libros = await response.json();
                 todosLosLibros = [...todosLosLibros, ...libros];
             } catch (error) {
